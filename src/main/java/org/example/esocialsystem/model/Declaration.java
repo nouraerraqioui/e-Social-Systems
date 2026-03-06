@@ -1,9 +1,20 @@
-import java.sql.Date;
+package org.example.esocialsystem.model;
 
+import jakarta.persistence.*;
+
+import java.sql.Date;
+@Entity
 public class Declaration {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
         private int id;
+    @Column(name = "mois")
         private int mois;
+
+    @Column(name = "date")
         private int date;
+
+    @Column(name = "dateDeclaration")
         private Date dateDeclaration;
         public Declaration(int id, int mois, int date, Date dateDeclaration) {
             this.id = id;
@@ -11,7 +22,12 @@ public class Declaration {
             this.date = date;
             this.dateDeclaration = dateDeclaration;
         }
-        public int getId() {
+
+    public Declaration() {
+
+    }
+
+    public int getId() {
             return id;
         }
         public void setId(int id) {

@@ -1,12 +1,19 @@
+package org.example.esocialsystem.model;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
 public class Employeur {
-    @Id
-    @GeneratedValue()
+
         private int id;
+
         private String raisonSociale;
+
+
         private String secteurActivite;
+
         public Employeur(int id, String raisonSociale, String secteurActivite) {
             this.id = id;
             this.raisonSociale = raisonSociale;
